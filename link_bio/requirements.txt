@@ -1,0 +1,8 @@
+reflex==0.7.1
+mysql-connector-python
+pykalman
+scipy
+fastapi
+uvicorn
+pandas
+httpx

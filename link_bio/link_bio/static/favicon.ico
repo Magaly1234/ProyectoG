@@ -1,0 +1,12 @@
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+
+app = FastAPI()
+
+@app.get("/")
+async def read_root():
+    return {"message": "Bienvenido a mi API!"}
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return FileResponse("link_bio/static/favicon.ico")  # Ruta real del archivo favicon.ico
